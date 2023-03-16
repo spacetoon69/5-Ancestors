@@ -1,0 +1,321 @@
+/*********
+Body Style
+*********/
+body{
+    width: auto;
+    margin: auto;
+    background-color: grey;
+    padding: 0.5px
+
+}
+
+/*********
+Body Style end
+*********/
+
+/*********
+Nav Style
+*********/
+.header .nav .settings {
+    position: relative;
+    width: auto;
+    background-attachment: scroll;
+}
+
+ul{
+    list-style: none ;
+    margin: 0;
+    padding: 0 ;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {    
+    border-right: none;}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active{
+    background-color: #4caf50;
+    float:right;
+}
+div.header{
+    border-style: outset;
+    padding: 0.5px;
+    display: block;
+    height: 45px;
+    width: 100%;
+}
+
+div.nav{
+    border-style: hidden;
+    border: 1px soild black;
+    width: max-content;
+    display: block;
+    float: left
+}
+
+.settings{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    display: inline-flex;
+    float:right;
+}
+
+.bus .profile{
+    position: relative;
+}
+.bus{
+    border-style: hidden;
+    border: 1px soild black;
+    display: inline-flex;
+}
+
+.profile{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    display: inline-flex;
+}
+img{
+    border-radius: 50%;
+    
+}
+
+div.Menuimg{
+    border-style: hidden;
+    border: 1px soild black;
+    display: inline-flex;
+}
+
+/*********
+Nav Style end
+*********/
+
+/*********
+Section1 Style
+*********/
+div.section1{
+    border-style: outset;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 200x;
+    
+}
+
+div.balance{
+    background: #fff;
+    display: inline-flex;
+    margin-left: 0.5px;
+    top: 50px;
+    border-radius: 4px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.balance .card span{
+    display: flex;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top:30px;
+}
+/*********
+Section1 Style end
+*********/
+
+.deposit .balance .history{
+    position: inline;
+}
+div.transaction{
+    border-style: outset;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 300px;
+}
+
+div.deposit{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    display: block;
+    margin: 50px 10px 50px 10px;
+}
+
+div.transfer{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    display: block;
+    margin: 50px 10px 50px 10px;
+}
+
+div.history{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    display: block;
+    margin: 50px 10px 50px 10px;
+}
+
+/*********
+Section2 Style
+*********/
+
+.payment{
+    border-style: outset;
+    margin: auto;
+    padding: 0;
+}
+
+div.pay{
+    border-style: hidden;
+    border: 1px soild black;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin: 50px 10px 50px 10px;
+}
+
+div.online{
+    border-style: hidden;
+    border: 1px soild black;
+    display: block;
+    margin: 50px 10px 50px 10px;
+}
+
+/*********
+Section2 Style end
+*********/
+
+/*********
+Section3 Style
+*********/
+
+div.footer{
+    border-style: hidden;
+    margin: auto;
+    padding: 0.5px
+}
+
+/*********
+Section3 Style end
+*********/
+
+/**********
+Links
+**********/
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+    text-decoration: none;
+    background-color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: hotpink;
+    border-radius: 4px;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+    text-decoration: underline;
+    background-color: hotpink;
+}
+
+/*********
+Links end
+*********/
+
+/*********
+buttons
+*********/
+
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: yellow; /*yellow*/
+    border: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.button3 {
+    background-color: rgb(221, 211, 211) ; /* grey */
+    border: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.button4 {
+    background-color: red; /* red */
+    border: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+/********
+buttons end
+********/
