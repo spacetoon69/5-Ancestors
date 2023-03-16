@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en-US">
+    <title>A48</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="HTML, CSS, XML, XHML, JavaScript">
+    <meta name="description" content="My web design progress">
+    <meta name="author" content="Loadworkforce">
+    <meta http-equiv="refresh" content="">
+    <link rel="stylesheet" href="./signup.css">
+    <script src="Prototype.js" async defer></script>
+    <link rel="icon" href="Screenshot (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+   <div class="sign-up-form">
+
+    <div class="bus">
+        <img src="./img/Bus Driver_Outline.png" alt="">
+    </div>
+
+        <h1>Sign Up Now</h1>
+            <input type="text" id="username" name="username" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <p><span><input type="checkbox"></span> I agree to the terms of services</p>
+            <input type="button" id="signup" value="sign up"></input>
+            <hr>
+            <button type="button" onclick="location.href='login.html'">login</button>
+        </form>
+   </div>
+
+    <footer>&copy;2023|Federal University Lokoja Shuttle Payment Web App</footer>
+
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+  import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBsa9hYN79m55Wr92qNG9w9uEuKWau5Syk",
+    authDomain: "shuttle-on-the-go.firebaseapp.com",
+    databaseURL: "https://shuttle-on-the-go-default-rtdb.firebaseio.com",
+    projectId: "shuttle-on-the-go",
+    storageBucket: "shuttle-on-the-go.appspot.com",
+    messagingSenderId: "97089847978",
+    appId: "1:97089847978:web:f65c25de611d31da2106d3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signup.addEventListener('click',(e) => {
+    
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var username = document.getElementById('username').value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+
+      set(ref(database, 'users/' + user.uid), {
+        email: email,
+        password: password
+  })
+  .then(() => {
+  // Data saved successfully!
+  window.location.assign("Prototype.html");
+  alert('user created')
+})
+.catch((error) => {
+  // The write failed...
+  alert(error);
+});
+
+      
+      // ...
+    })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+        // ..
+      });
+
+  });
+</script>
+https://paystack.com/pay/xsiwk43g04
+
+</html>
