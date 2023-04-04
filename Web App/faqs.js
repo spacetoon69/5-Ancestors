@@ -80,8 +80,7 @@ jQuery(document).ready(function($){
         height = jQuery('.faq').height() - jQuery('.categories').height(),
         margin = 20;
       if( top - margin <= $(window).scrollTop() && top - margin + height > $(window).scrollTop() ) {
-        var leftValue = faqsCategoriesContainer.offset().left,
-          widthValue = faqsCategoriesContainer.width();
+        var leftValue = faqsCategoriesContainer.offset().left;
         faqsCategoriesContainer.addClass('is-fixed').css({
           'left': leftValue,
           'top': margin,
